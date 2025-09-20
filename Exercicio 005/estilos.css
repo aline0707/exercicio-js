@@ -1,0 +1,33 @@
+/*seletor
+tag--> body
+id--> #foto
+classe --> .nomedaclasse*/
+
+body{
+    /*propriedade : valor*/
+    color: #030303 ;
+    background-color: #8cb0df;
+    }
+
+    #foto{
+        width: 250px;
+        border-top: 10px double   rgb(12, 11, 11);
+        border-radius: 100px;
+    }
+ /*
+ cores originais:
+ texto #030303  
+ fundo  #8cb0df
+
+ cores Dia:
+ texto #030303  
+ fundo  #f0da12
+
+ cores Tarde:
+ texto #030303  
+ fundo  #f38f1c
+
+  cores Noite:
+ texto #faf3f3 
+ fundo  #060d50
+*/
