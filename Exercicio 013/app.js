@@ -33,5 +33,6 @@ function fnListarVeiculos(){
 }
 
 function fnLimpar(){
+  document.getElementById("form_veiculos").reset()
   
 }
