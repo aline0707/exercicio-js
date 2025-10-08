@@ -1,0 +1,13 @@
+.cartao{
+    background-color: rgb(15, 122, 122)!important;
+transition: transform 0.5s ease;
+}
+
+
+
+.cartao:hover{
+    transform: translateY(-15px);
+
+}
+
+
