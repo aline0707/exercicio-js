@@ -1,0 +1,22 @@
+const timesBrasileirao2025 = [
+  "Atlético Mineiro",
+  "Atlético Paranaense",
+  "Bahia",
+  "Botafogo",
+  "Bragantino",
+  "Corinthians",
+  "Coritiba",
+  "Cruzeiro",
+  "Cuiabá",
+  "Flamengo",
+  "Fluminense",
+  "Fortaleza",
+  "Grêmio",
+  "Internacional",
+  "Juventude",
+  "Palmeiras",
+  "Santos",
+  "São Paulo",
+  "Vasco da Gama",
+  "Vitória"
+];
