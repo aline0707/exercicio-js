@@ -1,58 +1,80 @@
-const times = [
-  "Atlético Mineiro",
-  "Atlético Paranaense",
-  "Bahia",
-  "Botafogo",
-  "Bragantino",
-  "Corinthians",
-  "Coritiba",
-  "Cruzeiro",
-  "Cuiabá",
-  "Flamengo",
-  "Fluminense",
-  "Fortaleza",
-  "Grêmio",
-  "Internacional",
-  "Juventude",
-  "Palmeiras",
-  "Santos",
-  "São Paulo",
-  "Vasco da Gama",
-  "Vitória"
+const pokemons = [
+  "Bulbasaur", "Ivysaur", "Venusaur",
+  "Charmander", "Charmeleon", "Charizard",
+  "Squirtle", "Wartortle", "Blastoise",
+  "Caterpie", "Metapod", "Butterfree",
+  "Weedle", "Kakuna", "Beedrill",
+  "Pidgey", "Pidgeotto", "Pidgeot",
+  "Rattata", "Raticate",
+  "Spearow", "Fearow",
+  "Ekans", "Arbok",
+  "Pikachu", "Raichu",
+  "Sandshrew", "Sandslash",
+  "Nidoran♀", "Nidorina", "Nidoqueen",
+  "Nidoran♂", "Nidorino", "Nidoking",
+  "Clefairy", "Clefable",
+  "Vulpix", "Ninetales",
+  "Jigglypuff", "Wigglytuff",
+  "Zubat", "Golbat",
+  "Oddish", "Gloom", "Vileplume",
+  "Paras", "Parasect",
+  "Venonat", "Venomoth",
+  "Diglett", "Dugtrio",
+  "Meowth", "Persian",
+  "Psyduck", "Golduck",
+  "Mankey", "Primeape",
+  "Growlithe", "Arcanine",
+  "Poliwag", "Poliwhirl", "Poliwrath",
+  "Abra", "Kadabra", "Alakazam",
+  "Machop", "Machoke", "Machamp",
+  "Bellsprout", "Weepinbell", "Victreebel",
+  "Tentacool", "Tentacruel",
+  "Geodude", "Graveler", "Golem",
+  "Ponyta", "Rapidash",
+  "Slowpoke", "Slowbro",
+  "Magnemite", "Magneton",
+  "Farfetch’d",
+  "Doduo", "Dodrio",
+  "Seel", "Dewgong",
+  "Grimer", "Muk",
+  "Shellder", "Cloyster",
+  "Gastly", "Haunter", "Gengar",
+  "Onix",
+  "Drowzee", "Hypno",
+  "Krabby", "Kingler",
+  "Voltorb", "Electrode",
+  "Exeggcute", "Exeggutor",
+  "Cubone", "Marowak",
+  "Hitmonlee", "Hitmonchan",
+  "Lickitung",
+  "Koffing", "Weezing",
+  "Rhyhorn", "Rhydon",
+  "Chansey",
+  "Tangela",
+  "Kangaskhan",
+  "Horsea", "Seadra",
+  "Goldeen", "Seaking",
+  "Staryu", "Starmie",
+  "Mr. Mime",
+  "Scyther",
+  "Jynx",
+  "Electabuzz",
+  "Magmar",
+  "Pinsir",
+  "Tauros",
+  "Magikarp", "Gyarados",
+  "Lapras",
+  "Ditto",
+  "Eevee", "Vaporeon", "Jolteon", "Flareon",
+  "Porygon",
+  "Omanyte", "Omastar",
+  "Kabuto", "Kabutops",
+  "Aerodactyl",
+  "Snorlax",
+  "Articuno", "Zapdos", "Moltres",
+  "Dratini", "Dragonair", "Dragonite",
+  "Mewtwo"
 ];
-
-console.dir(times)
-
-const cidadesDosTimes = [
-  "Belo Horizonte",
-  "Curitiba",
-  "Salvador",
-  "Rio de Janeiro",
-  "Bragança Paulista",
-  "São Paulo",
-  "Curitiba",
-  "Belo Horizonte",
-  "Cuiabá",
-  "Rio de Janeiro",
-  "Rio de Janeiro",
-  "Fortaleza",
-  "Porto Alegre",
-  "Porto Alegre",
-  "Caxias do Sul",
-  "São Paulo",
-  "Santos",
-  "São Paulo",
-  "Rio de Janeiro",
-  "Salvador"
-];
-function fnListaTimes(){
-    for (let i = 0; i <times.length; i++) {
-    document.getElementById("lista_times").innerHTML += 
-    `<div class ="col-6 border text-center"> ${times[i]} - ${cidadesDosTimes[i]}</div>`
-}
-}
-
-fnListaTimes()
 
 const pokemonImages = [
   "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
@@ -208,9 +230,19 @@ const pokemonImages = [
 ];
  
 function fnListarPokemon(){
-  document.getElementById("numeru").innerHTML = "#1"
-  document.getElementById("nome").innerHTML = pokemons [0]
-document.getElementById("foto").src = pokemonImages[0]
+    let i = fnRolarDados()
+  document.getElementById("numero").innerHTML = `#${i+1}`
+  document.getElementById("nome").innerHTML = pokemons [i]
+document.getElementById("foto").src = pokemonImages[i]
+}
+
+function fnRolarDados(){
+    let min = 0
+    let max = 140
+    let numeroSorteado = Math.floor(Math.random() * (max-min + 1)) + min
+    console.log(numeroSorteado)
+
+    return numeroSorteado
 }
 
 fnListarPokemon()
